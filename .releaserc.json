@@ -1,11 +1,17 @@
 {
   "debug": true,
   "branches": [
-    "+([0-9])?(.{+([0-9]),x}).x",
-    "master",
+    {
+      "name": "+([0-9])?(.{+([0-9]),x}).x",
+      "prerelease": "snapshot"
+    },
+    {
+      "name": "master",
+      "prerelease": "snapshot"
+    },
     {
       "name": "beta",
-      "prerelease": true
+      "prerelease": "beta"
     }
   ],
   "plugins": [
